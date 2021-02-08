@@ -7,5 +7,12 @@
 # }
 
 def select_winner(passengers)
-  # add the code snippet here!
+  # add the code snippet here!      #returns the name of the passenger who stays in suite a and whose name begins with the letter 'A'
+  winner = ""
+  passengers.each do |suite, name|   #we iterate through the hash using #each
+    if suite == :suite_a && name.start_with?("A")
+      winner = name
+    end
+  end
+  winner
 end
